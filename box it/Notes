@@ -1,0 +1,7 @@
+In the case of operator overloading, whether a function is defined as a member or non-member function depends on the left-hand operand of the operator.
+
+If you want to overload an operator and use the left-hand operand as the object of your class, you typically define it as a member function.
+If you want to overload an operator and use the left-hand operand as another type (not the object of your class), you define it as a non-member function.
+For example, in the case of the operator<< (stream insertion) and operator>> (stream extraction), they are typically defined as non-member functions because you want to use these operators with stream objects (std::ostream and std::istream), not with objects of your class. However, you often declare them as friends in your class to allow access to private members if needed for the stream insertion/extraction.
+
+In conclusion, the decision to make a function a member or non-member function depends on whether it operates on the members of a specific class or not, and in the case of operator overloading, it also depends on the left-hand operand of the operator.

@@ -1,0 +1,3 @@
+/media/mirage/lin/hackerrank/testingcmaek/build/CMakeFiles/Tutorial.dir
+/media/mirage/lin/hackerrank/testingcmaek/build/CMakeFiles/edit_cache.dir
+/media/mirage/lin/hackerrank/testingcmaek/build/CMakeFiles/rebuild_cache.dir
