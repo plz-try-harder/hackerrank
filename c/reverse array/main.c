@@ -15,6 +15,19 @@ int main()
 
 
     /* Write the logic to reverse the array. */
+    //1. solution:
+    /*
+    int temp = 0;
+    
+    for(int i = 0 ; i < num/2 ; i++){
+        temp = arr[num-1-i];
+        arr[num-1-i] = arr[i];
+        arr[i] = temp;
+    }
+
+    */
+
+    //2. solution:
     
     int *arr2= (int*) malloc(num * sizeof(int));
     
