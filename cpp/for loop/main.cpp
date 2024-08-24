@@ -13,7 +13,7 @@ int main() {
     
     if(a <= b )
     {
-       for (int n = a; n <= b; n++)
+       for (int n = a; n <= 9 && n <= b ; n++)
        {
            toNumba(n);
        }
