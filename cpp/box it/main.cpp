@@ -71,6 +71,19 @@ class Box{
         {
             return out << B.l << ' ' << B.b << ' ' << B.h;
         }
+        /*Key Points:
+        Non-member function: The operator<< must be defined outside the class because the first operand is
+         not an instance of Box.
+        Friend function: Declaring it as a friend inside the class allows it to access the private members 
+        (l, b, and h) directly if needed. In this example, the function still uses the public getters, but 
+        the friend declaration is useful if you want direct access to private members.
+        Const correctness: Notice that both the operator<< and relevant member functions are marked as 
+        const, ensuring that they don’t modify the object.
+        Summary
+        Defining operator<< as a non-member function allows it to work correctly with streams like 
+        std::cout. The error happened because the compiler was expecting a member function to take exactly 
+        one argument (the right-hand operand of <<), but here it requires both the stream (std::ostream&) 
+        and the Box object. */
     private:
         int l,b,h;  
 };
