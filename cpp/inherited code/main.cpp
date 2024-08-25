@@ -6,7 +6,7 @@ using namespace std;
 
 /* Define the exception here */
 
-class BadLengthException{
+class BadLengthException : exception{
     public:
     BadLengthException(int n):m_n(n) {}
     int what(){
