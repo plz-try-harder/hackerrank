@@ -12,48 +12,31 @@
 using namespace std;
 
 
-int main() {
-    int q; std::cin >> q;
-    std::set<int> sit;
-    std::vector<string> printing;
+int main() {  
+    int q = 0;
+    cin >> q; 
+    //vector<int> queries;
+    set<int> set;
     
-    for ( int i = 0 ; i <= q ; i++){
-        std::string query;
-        int type;
-        std::getline(std::cin , query);
-        std::stringstream s(query);
-        
-        s >> type;
-        if(type == 1){
-            int n;
-            s >> n;
-            sit.insert(n);
-            
-        }else if(type == 2){
-            int n;
-            s >> n;
-            sit.erase(n);
-            
-        }else if(type == 3){
-            int n;
-            s >> n;
-            std::set<int>::iterator itr = sit.find(n);
-            
-            if(itr == sit.end()){
-                printing.push_back("No");
-            }else if (itr != sit.end()) {
-                printing.push_back("Yes");
+    
+    for (int i = 0 ; i < q ; i++){
+        int choice;
+        int element;
+        cin >> choice >> element;
+        if(choice == 1){
+            set.insert(element);
+        }else if(choice == 2){
+            set.erase(element);
+        }else if (choice == 3){
+            if(set.find(element) != set.end()){
+                cout << "Yes" << endl;
+            }else{
+                cout << "No" << endl;
             }
-            
         }
-         
         
     }
     
-    for (int i = 0 ; i < printing.size(); i++){
-        std::cout << printing[i] << std::endl;
-    }
-    
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
     return 0;
 }
+
